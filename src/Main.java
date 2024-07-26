@@ -1,14 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        String usbPath = "Z:\\";
-        String usbName = "Usb de leo";
+        Auto miAuto = new Auto("Toyota", "Corolla", 2020, "Rojo", 450);
 
-        if (!Menu.isUsbConnected(usbPath, usbName)) {
-            System.out.println("USB no detectada o incorrecta. No se puede iniciar el programa.");
-            return;
-        }
+        miAuto.arrancar();
+        miAuto.detener();
+        miAuto.acelerar();
+        miAuto.frenar();
+        miAuto.girarIzquierda();
+        miAuto.girarDerecha();
+        miAuto.encenderLuces();
+        miAuto.apagarLuces();
+        miAuto.tocarBocina();
+        miAuto.mostrarVelocidad();
 
-        Menu menu = new Menu();
-        menu.mostrarMenu();
+        miAuto.abrirMaletero();
+        miAuto.cerrarMaletero();
+
+        System.out.println(miAuto);
     }
 }
